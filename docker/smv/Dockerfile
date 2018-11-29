@@ -4,8 +4,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG SBT_VERSION=0.13.15
 ENV PATH=$PATH:/usr/lib/SMV/tools:/usr/lib/spark/bin:/usr/lib/sbt/bin
 
+# DH: removed line "apt-key adv --keyserver hkp://pgp.mit.edu --recv-key 381BA480 &&\" due to error
 RUN echo "deb http://cran.rstudio.com/bin/linux/debian lenny-cran/" >> /etc/apt/source.list &&\
-    apt-key adv --keyserver hkp://pgp.mit.edu --recv-key 381BA480 &&\
     apt-get update &&\
     apt-get install -y r-base &&\
     apt-get install -y unzip &&\

@@ -1,0 +1,1 @@
+docker run -it --rm -p 4041:4040 -p 8889:8888 -p 18081:18080 -v C:\docker\dylanhogg-smv-v2.2:/projects dylanhogg/smv:2.2
