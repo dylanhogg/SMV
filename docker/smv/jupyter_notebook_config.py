@@ -1,7 +1,10 @@
 import os
 
 ## Default value for IP address the notebook server will listen on. Will be overriden by command line
-c.NotebookApp.ip = os.environ.get('JUPYTER_IP', '*')
+# DH: Fix notebook startup error with JUPYTER_IP: socket.gaierror: [Errno -2] Name or service not known
+#     Ref: https://stackoverflow.com/questions/52706238/jupyter-throwing-error-socket-gaierror-errno-2-name-or-service-not-known
+c.NotebookApp.ip = os.environ.get('JUPYTER_IP', '0.0.0.0')
+#c.NotebookApp.ip = os.environ.get('JUPYTER_IP', '*')
 
 ## Deafult port for the notebook server will listen on. Will be overriden by command line
 c.NotebookApp.port = int(os.environ.get('JUPYTER_PORT', '8888'))
