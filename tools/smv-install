@@ -95,7 +95,8 @@ download_smv() {
 
 # Download prebuilt spark version with hive support.
 download_spark() {
-  install_app "http://www-us.apache.org/dist/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz"
+  # install_app "http://www-us.apache.org/dist/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz"
+  install_app "https://archive.apache.org/dist/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz"
 }
 
 jre_installtion_validation() {
